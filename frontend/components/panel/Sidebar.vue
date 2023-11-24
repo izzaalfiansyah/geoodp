@@ -1,7 +1,7 @@
 <template>
   <div
     class="min-h-screen lg:relative fixed top-0 bottom-0 left-0 bg-white w300px z-100 shadow -translate-x-full lg:translate-x-0 transition"
-    :class="{ '!translate-x-0': sidebarOpen }">
+    :class="{ '!translate-x-0': open }">
     <div class="flex justify-center py10">
       <Logo width="80px" height="80px" />
     </div>
@@ -26,14 +26,21 @@
       </ul>
     </div>
   </div>
-  <div class="bg-black bg-opacity-25 fixed top-0 left-0 right-0 bottom-0 z-99" :class="{ hidden: !sidebarOpen }"
-    :click="sidebarOpen = false"></div>
+  <div class="bg-black bg-opacity-25 fixed top-0 left-0 right-0 bottom-0 z-99" :class="{ hidden: !open }"
+    @click="$emit('toggle')">
+  </div>
 </template>
 
 <script setup lang="ts">
 import { type IconType } from "~/components/Icon.vue";
 
-const sidebarOpen = ref(false);
+defineProps<{
+  open: boolean;
+}>();
+
+defineEmits<{
+  toggle: [],
+}>();
 
 const menus: Array<{
   path: string;
