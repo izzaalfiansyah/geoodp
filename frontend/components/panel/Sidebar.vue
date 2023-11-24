@@ -10,7 +10,7 @@
         <template v-for="menu in menus">
           <li class="mb2">
             <NuxtLink :to="menu.path"
-              :class="`flex items-center p2.5 px4.5 decoration-none text-gray800 transition ${menu.path == '/' ? 'bg-primary text-white' : 'hover:text-primary'} rounded rounded-full`">
+              :class="`flex items-center p2.5 px4.5 decoration-none text-gray800 transition ${menu.path == route.path ? 'bg-primary text-white' : 'hover:text-primary'} rounded rounded-full`">
               <Icon :type="menu.icon" class="mr3 w5 h5" />
               <span>{{ menu.title }}</span>
             </NuxtLink>
@@ -33,6 +33,8 @@
 
 <script setup lang="ts">
 import { type IconType } from "~/components/Icon.vue";
+
+const route = useRoute();
 
 defineProps<{
   open: boolean;

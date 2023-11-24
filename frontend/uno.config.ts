@@ -11,7 +11,10 @@ import {
 
 export default defineConfig({
   shortcuts: [
-    // ...
+    {
+      btn: "py-2.5 px-4 uppercase rounded shadow-sm border-none cursor-pointer outline-none",
+    },
+    [/^btn-(.*)$/, ([, c]) => `bg-${c} text-white transition`],
   ],
   theme: {
     colors: {

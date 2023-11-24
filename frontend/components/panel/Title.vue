@@ -1,5 +1,5 @@
 <template>
-  <div class="text-lg text-white bg-primary px-5 p-.5 rounded-full shadow-sm">
+  <div class="text-xl text-primary p-.5 border-b-solid border-b-gray-100 border-b-1 pb-3 font-semibold">
     <slot></slot>
   </div>
 </template>
