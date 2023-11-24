@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen lg:relative fixed top-0 bottom-0 left-0 bg-white w300px z-100 shadow -translate-x-full lg:translate-x-0 transition"
+    class="min-h-screen fixed top-0 bottom-0 left-0 bg-white w300px z-100 shadow -translate-x-full lg:translate-x-0 transition"
     :class="{ '!translate-x-0': open }">
     <div class="flex justify-center py10">
       <Logo width="80px" height="80px" />
