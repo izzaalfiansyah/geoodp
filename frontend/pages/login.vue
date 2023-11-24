@@ -20,15 +20,6 @@
   </div>
 </template>
 
-<style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat';
-}
-</style>
-
 <style scoped>
 .bg-login {
   background: url('https://images.unsplash.com/photo-1595757816291-ab4c1cba0fc2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
