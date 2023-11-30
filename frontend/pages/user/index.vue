@@ -5,7 +5,7 @@
       <input type="text"
         class="lg:w-400px w-full rounded h-10 border-solid border-gray-100 border outline-none px-3 focus:(border-blue-500 ring ring-indigo-100) transition"
         placeholder="Cari...">
-      <button class="btn btn-primary">Tambah</button>
+      <NuxtLink to="/user/create" class="btn btn-primary no-underline">Tambah</NuxtLink>
     </div>
     <div class="mt-8">
       <table class="border border-collapse w-full">
