@@ -12,7 +12,9 @@ import {
 export default defineConfig({
   shortcuts: [
     {
-      btn: "py-2.5 px-4 uppercase rounded shadow-sm border-none cursor-pointer outline-none",
+      btn: "py-2.5 px-5 uppercase rounded shadow-sm border-none cursor-pointer outline-none",
+      input:
+        "h-10 rounded border border-gray-100 border-solid w-full px-3 outline-none focus:(ring ring-indigo-100 border-blue-400) transition",
     },
     [/^btn-(.*)$/, ([, c]) => `bg-${c} text-white transition`],
   ],
@@ -29,7 +31,10 @@ export default defineConfig({
     presetWebFonts({
       provider: "google",
       fonts: {
-        sans: ["Montserrat", "Montserrat:100,200,300,400,500,600,700,800,900"],
+        montserrat: [
+          "Montserrat",
+          "Montserrat:100,200,300,400,500,600,700,800,900",
+        ],
       },
     }),
   ],
