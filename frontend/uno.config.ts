@@ -14,7 +14,7 @@ export default defineConfig({
     {
       btn: "py-2.5 px-5 uppercase rounded shadow-sm border-none cursor-pointer outline-none",
       input:
-        "h-10 rounded border border-gray-100 border-solid w-full px-3 outline-none focus:(ring ring-indigo-100 border-blue-400) transition",
+        "py-2.5 rounded border border-gray-100 border-solid w-full px-3 outline-none focus:(ring ring-indigo-100 border-blue-400) transition resize-none",
     },
     [/^btn-(.*)$/, ([, c]) => `bg-${c} text-white transition`],
   ],

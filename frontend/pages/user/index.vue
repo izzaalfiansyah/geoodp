@@ -15,7 +15,7 @@
           nomor_telepon: '081231921351',
         }
       ]">
-        <template #item-opsi="{ item }">
+        <template v-slot:item-opsi="{ item }">
           <button
             class="bg-white cursor-pointer transition hover:bg-gray-50 rounded-full h-8 w-8 flex items-center justify-center border-none">
             <Icon type="more" class="w-4 h-4 m-0"></Icon>

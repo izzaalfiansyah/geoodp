@@ -1,17 +1,24 @@
 <template>
-  <form @submit.prevent="handleSubmit" ref="el">
-    <slot></slot>
+  <form @submit.prevent="handleSubmit">
+    <slot :errors="errors"></slot>
   </form>
 </template>
 
 <script lang="ts" setup>
-const el = ref<HTMLFormElement>();
 const emits = defineEmits<{
-  submit: [],
+  (e: 'submit'): any,
 }>();
 
-function handleSubmit() {
-  console.log(el.value);
-  emits('submit');
+const errors = ref<{
+  [key: string]: string;
+}>({});
+
+async function handleSubmit() {
+  try {
+    emits('submit');
+  } catch (e: any) {
+    console.log(e);
+    errors.value = e;
+  }
 }
 </script>
