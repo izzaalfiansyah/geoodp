@@ -16,13 +16,19 @@
           email: 'iansyah724@gmail.com',
           nama: 'Muhammad Izza Alfiansyah',
           nomor_telepon: '081231921351',
-        }
+        },
       ]">
         <template v-slot:item-opsi="{ item }">
-          <button
-            class="bg-white cursor-pointer transition hover:bg-gray-50 rounded-full h-8 w-8 flex items-center justify-center border-none">
-            <Icon type="more" class="w-4 h-4 m-0"></Icon>
-          </button>
+          <div class="space-x-1">
+            <button type="button"
+              class="cursor-pointer text-gray-600 hover:text-primary transition bg-transparent border-transparent">
+              <Icon type="edit" class="w-4 h-4"></Icon>
+            </button>
+            <button type="button"
+              class="cursor-pointer text-gray-600 hover:text-primary transition bg-transparent border-transparent">
+              <Icon type="delete" class="w-4 h-4"></Icon>
+            </button>
+          </div>
         </template>
       </Table>
     </div>
