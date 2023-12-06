@@ -9,7 +9,7 @@
       <ul class="list-none pl0">
         <template v-for="menu in menus">
           <li class="mb2">
-            <NuxtLink :to="menu.path"
+            <NuxtLink :to="menu.path" @click="$emit('toggle')"
               :class="`flex items-center p2.5 px4.5 decoration-none text-gray800 transition ${menu.path == route.path || (menu.path != '/' && route.path.includes(menu.path)) ? 'bg-primary text-white' : 'hover:text-primary'} rounded rounded-full`">
               <Icon :type="menu.icon" class="mr3 w5 h5" />
               <span>{{ menu.title }}</span>
@@ -26,7 +26,7 @@
       </ul>
     </div>
   </div>
-  <div class="bg-black bg-opacity-25 fixed top-0 left-0 right-0 bottom-0 z-99" :class="{ hidden: !open }"
+  <div class="bg-black bg-opacity-25 lg:hidden fixed top-0 left-0 right-0 bottom-0 z-99" :class="{ hidden: !open }"
     @click="$emit('toggle')">
   </div>
 </template>
