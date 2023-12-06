@@ -13,7 +13,7 @@
           <tr class="border-b-solid border border-t-solid border-gray-100">
             <template v-for="header in headers">
               <td class="p-3">
-                <slot :name="'item-' + header.replace(/ /gi, '_').toLowerCase()" :item="item">
+                <slot :name="'item-' + header.replace(/ /gi, '-').toLowerCase()" :item="item">
                   {{ item[header.replace(/ /gi, '_').toLowerCase()] }}
                 </slot>
               </td>

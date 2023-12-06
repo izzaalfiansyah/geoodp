@@ -6,7 +6,9 @@
         <span class="text-red-500">*</span>
       </template>
     </div>
-    <slot></slot>
+    <label class="block">
+      <slot></slot>
+    </label>
   </div>
 </template>
 

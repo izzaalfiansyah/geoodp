@@ -3,7 +3,7 @@
   <Card>
     <form @submit.prevent="handleSubmit">
       <FormField label="Email" required>
-        <input type="email" class="input max-w-2xl" placeholder="example@gmail.com">
+        <input type="email" class="input max-w-xl" placeholder="example@gmail.com">
         <FormError :error="errors?.email"></FormError>
       </FormField>
       <FormField label="Password" required>
@@ -13,14 +13,14 @@
         <input type="password" class="input max-w-xl" placeholder="********">
       </FormField>
       <FormField label="Nama" required>
-        <input type="text" class="input max-w-2xl" placeholder="Masukkan Nama">
+        <input type="text" class="input max-w-xl" placeholder="Masukkan Nama">
         <FormError :error="errors?.nama"></FormError>
       </FormField>
       <FormField label="Nomor Telepon" required>
         <input type="text" class="input max-w-lg" placeholder="08xxxxxxxxx">
       </FormField>
       <FormField label="Alamat">
-        <textarea rows="5" class="input max-w-2xl" placeholder="Masukkan Alamat"></textarea>
+        <textarea rows="3" class="input max-w-xl" placeholder="Masukkan Alamat"></textarea>
       </FormField>
       <button type="submit" class="mt-5 btn btn-primary">Simpan</button>
     </form>

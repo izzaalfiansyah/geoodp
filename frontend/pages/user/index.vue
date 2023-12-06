@@ -2,9 +2,12 @@
   <PanelTitle>Data User</PanelTitle>
   <Card>
     <div class="flex items-center justify-between gap-4 flex-wrap">
-      <input type="text"
-        class="lg:w-400px w-full rounded h-10 border-solid border-gray-100 border outline-none px-3 focus:(border-blue-500 ring ring-indigo-100) transition"
-        placeholder="Cari...">
+      <div class="relative">
+        <button class="btn absolute top-0 right-0 w-10 bg-transparent text-gray-500 flex items-center justify-center p-0">
+          <Icon type="search" class="w-4 h-4"></Icon>
+        </button>
+        <input type="text" class="lg:w-400px input pr-10" placeholder="Cari">
+      </div>
       <NuxtLink to="/user/create" class="btn btn-primary no-underline">Tambah</NuxtLink>
     </div>
     <div class="mt-8">

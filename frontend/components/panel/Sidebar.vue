@@ -61,7 +61,7 @@ const menus: Array<{
     },
     {
       path: '/odp',
-      title: 'Data Layanan',
+      title: 'Data ODP',
       icon: 'folder-open',
     },
     {
