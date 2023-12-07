@@ -20,7 +20,7 @@
   <div class="grid lg:grid-cols-4 grid-cols-2 gap-5">
     <template v-for="item in Array.from({ length: 8 })">
       <div class="bg-white rounded-lg shadow overflow-hidden">
-        <div class="bg-gray-100 h-200px"></div>
+        <div class="bg-gray-50 h-200px"></div>
         <div class="p-4">
           <div class="text-base font-semibold">ODP 1</div>
           <div class="text-gray-500 text-xs">Sumbersari, Jember</div>
@@ -43,6 +43,10 @@
       <Pagination v-model="page" :total-records="120" :limit="8"></Pagination>
     </div>
   </Card>
+
+  <NuxtLink to="/odp/create" class="fab">
+    <Icon type="add"></Icon>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
