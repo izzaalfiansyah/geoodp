@@ -112,10 +112,17 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
     </svg>
   </template>
+
+  <template v-if="type == 'add'">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      :class="class">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+  </template>
 </template>
 
 <script setup lang="ts">
-export type IconType = 'home' | 'users' | 'user-group' | 'folder-open' | 'logout' | 'search' | 'menu' | 'more' | 'filter' | 'edit' | 'delete' | 'chevron-left' | 'chevron-right' | 'chevron-double-left' | 'chevron-double-right';
+export type IconType = 'home' | 'users' | 'user-group' | 'folder-open' | 'logout' | 'search' | 'menu' | 'more' | 'filter' | 'edit' | 'delete' | 'chevron-left' | 'chevron-right' | 'chevron-double-left' | 'chevron-double-right' | 'add';
 
 withDefaults(defineProps<{
   type: IconType;

@@ -4,7 +4,7 @@
       <thead>
         <tr>
           <template v-for="header in headers">
-            <td class="p-3 font-semibold">{{ header }}</td>
+            <td class="p-3 py-5 font-semibold">{{ header }}</td>
           </template>
         </tr>
       </thead>
@@ -12,7 +12,7 @@
         <template v-for="item in items">
           <tr class="border-b-solid border border-t-solid border-gray-100">
             <template v-for="header in headers">
-              <td class="p-3">
+              <td class="p-3 py-5">
                 <slot :name="'item-' + header.replace(/ /gi, '-').toLowerCase()" :item="item">
                   {{ item[header.replace(/ /gi, '_').toLowerCase()] }}
                 </slot>
